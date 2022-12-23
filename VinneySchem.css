@@ -41,6 +41,9 @@ body:before {
 
 
 /* Всякие импорты */
+/* Тёмное оформление кода в настройках внешнего вида сайта */
+@import url(https://css-club.web.app/css/CodeMirror_dark.css);
+@import url(https://css-club.web.app/css/compact_news--flex.css);
 /* Отображение дат в истории */
 @import url(https://raw.githubusercontent.com/kaurkaur/Shikimori/master/CSS/HistoryDates.css);
 @import url(https://css-club.web.app/css/td_spoiler.min.css);
@@ -60,7 +63,8 @@ body:before {
 /* Материальные поля ввода */
 @import url(https://shiki-theme.web.app/import/md-textfields.css);
 /* Изменения профиля v1.0 */
-@import url(https://shiki-theme.web.app/import/profile-update.1.css);
+
+url(https://shiki-theme.web.app/import/profile-update.1.css);
 
 /* Анимация переключения истории */
 @import url(https://shiki-theme.web.app/import/profile-history_animation.css);
@@ -231,7 +235,7 @@ body:before {
 .p-profiles header.head .misc {
   font-size: 0px; 
 }
-@import url(https://css-club.web.app/css/compact_news--flex.css);
+
 
 /* Альтернативный макет для достижений в профиле */
 @import url(https://css-club.web.app/css/profile-achievements-layout-v1.css);
@@ -317,3 +321,24 @@ body:before {
 /* Замена стандартных постеров (указывается один раз!) */
 @import url(https://css-club.web.app/css/custom_posters.min.css);
 @import url(https://raw.githubusercontent.com/Vinneygreat/Theme/main/dubClubposters);
+/* Общие настройки обложек на станицах тайтлов */
+.p-db_entries .b-db_entry .c-poster center {
+  position: relative;
+}
+
+.p-db_entries .b-db_entry .c-poster center::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 225px;
+  margin: auto;
+  background-position: top center;
+  background-size: cover;
+}
+
+.p-db_entries .b-db_entry .c-poster img {
+  vertical-align: top;
+}
