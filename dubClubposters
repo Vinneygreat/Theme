@@ -32,9 +32,8 @@
 @import url(https://css-club.web.app/css/custom_posters.min.css);
 
 /* Замена постера для ГОТИКА */
-[href*="animes/8425-"] {
-  --show-default: 0;
-  --custom-image: url(https://i.postimg.cc/RFZ0w8rs/Gotika.jpg);
+img[src*="/animes/original/8425."] {
+  content: url(https://i.postimg.cc/RFZ0w8rs/Gotika.jpg);
 }
 /* Замена постера для ЛЕТНЕЕ ВРЕМЯ */
 [href*="animes/47194-"] {
@@ -52,9 +51,8 @@
   --custom-image: url(https://i.postimg.cc/7hmPhnQv/image.png);
 }
 /* Замена постера для ВГА */
-[href*="animes/52193-"] {
-  --show-default: 0;
-  --custom-image: url(https://i.postimg.cc/fT8F2r9n/1.png);
+img[src*="/animes/original/52193."] {
+  content: url(https://i.postimg.cc/fT8F2r9n/1.png);
 }
 /* Замена постера для Одинокий рокеп */
 [href*="animes/47917-"] {
