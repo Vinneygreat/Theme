@@ -1,9 +1,6 @@
 img[src*="/animes/original/52193."] {
   content: url(https://i.postimg.cc/fT8F2r9n/1.png);
 }
-img[src*="/animes/original/52193."] {
-  content: url(https://i.postimg.cc/fT8F2r9n/1.png);
-}
 /* Замена постера для ГОТИКА */
 img[src*="/animes/original/8425."] {
   content: url(https://i.postimg.cc/RFZ0w8rs/Gotika.jpg);
