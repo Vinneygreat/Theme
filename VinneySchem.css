@@ -1,0 +1,374 @@
+
+/* СНЕГ */
+
+/* Слой с изображениями снега */
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Изображения снега: */
+  background-image: url(https://i.imgur.com/TpOI4DC.png),
+                    url(https://i.imgur.com/92lgmBN.png),
+                    url(https://i.imgur.com/ACiIkIG.png);
+  /* Размер изображений по порядку: */
+  /* (размер уменьшен в 2 раза: снежинки больше похожи на точки, чем на  детские рисунки */
+  /* (можно удалить) */
+  background-size: 250px, 200px, 150px;
+  /* Скорость анимации: */
+  /* (чем больше время, тем медленнее идет снег) */
+  animation: snow 16s linear infinite;
+}
+
+/* Анимация снега */
+@keyframes snow {
+  0% {
+    background-position: 0px 0px,
+                         0px 0px,
+                         0px 0px;
+  }
+  100% {
+    /* (Указан полный размер изображений по прядку, указанному в body:before) */
+    background-position: 500px 1000px,
+                         400px 400px,
+                         300px 300px;
+  }
+}
+/* КОНЕЦ СНЕГ */
+
+
+
+/* Всякие импорты */
+/* Отображение дат в истории */
+@import url(https://raw.githubusercontent.com/kaurkaur/Shikimori/master/CSS/HistoryDates.css);
+@import url(https://css-club.web.app/css/td_spoiler.min.css);
+@import url(https://css-club.web.app/css/rate_module.min.css);
+@import url(https://css-club.web.app/css/fixed_cover.min.css);
+@import url(https://css-club.web.app/css/compact_news--grid.css);
+@import url(https://shiki-theme.web.app/test/use-tabs.css);
+/* AUTO=body_background */ body { background: url(/assets/background/use_your_illusion.png) repeat; }
+/* Основной файл */
+@import url(https://shiki-theme.web.app/import/main.css);
+/* Стили обложки профиля */
+@import url(https://shiki-theme.web.app/import/profile-cover.css);
+/* Шрифт Roboto */
+@import url(https://shiki-theme.web.app/import/font-roboto.css);
+/* Шрифт Roboto Сondensed */
+@import url(https://shiki-theme.web.app/import/font-roboto_condensed.css);
+/* Материальные поля ввода */
+@import url(https://shiki-theme.web.app/import/md-textfields.css);
+/* Изменения профиля v1.0 */
+@import url(https://shiki-theme.web.app/import/profile-update.1.css);
+
+/* Анимация переключения истории */
+@import url(https://shiki-theme.web.app/import/profile-history_animation.css);
+/* Тема «Material Dark» */
+@import url(https://shiki-theme.web.app/import/theme-material_dark.css);
+
+/* Настройки переменных темы */
+@media{:root {
+  /* Обложка профиля */
+  --user-cover: url(https://i.postimg.cc/x1qd5h8d/Bez-imeni-1.png);
+  /* Фон сайта */
+  --user-background: none;
+}}
+
+/* Моя обложка в профиле */
+.p-profiles .profile-head[data-user-id="1126221"]::before {
+  display: block; /* Отображение обложки */
+  background-position: center 50%;
+}
+/* Меню справа */
+@import url(https://shiki-theme.web.app/import/test/b-shiki_editor-smileys.css);
+@import url(https://shiki-theme.web.app/import/test/l-side_menu.css);
+@media (min-width: 1264px) {
+  body::-webkit-scrollbar-thumb {
+    --color-menu-background: #9e9e9e;
+  }
+  .l-top_menu-v2 .logo-container::before {
+    display: none;
+    
+  }
+  .l-top_menu-v2 .logo-container .glyph {
+    display: block;
+    width: 64px;
+    height: 56px;
+    margin: 0;
+    background-position: center;
+    background-size: 32px;
+    
+  }
+}
+
+.l-top_menu-v2 {
+  background: rgba(0, 0, 0, 0);
+}
+/* Убираем график активности */
+.p-profiles-show .profile-content .activity {
+  display: none;
+}
+/* Вклад в сообщество */
+.p-profiles .profile-head .c-info .c-additionals {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: .5em;
+}
+
+.p-profiles .profile-head .c-info .c-additionals b {
+  display: block;
+  flex: 1 0 100%;
+}
+
+.p-profiles .profile-head .c-info .c-additionals b::after {
+  content: 'Вклад в сообщество';
+  display: inline-block;
+  padding: 8px 0;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals b::after {
+  content: 'Contribution';
+}
+
+.p-profiles .profile-head .c-info .c-additionals div {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0;
+  position: relative;
+  max-width: max(136px, 14.2857%);
+  min-width: min(33.3333%, 136px);
+  user-select: none;
+}
+
+.p-profiles .profile-head .c-info .c-additionals div[data-type="video_uploads"],
+.p-profiles .profile-head .c-info .c-additionals div[data-type="video_changes"] {
+  /* display: none; */
+}
+
+.p-profiles .profile-head .c-info .c-additionals div::after {
+  display: none;
+}
+
+.p-profiles .profile-head .c-info .c-additionals div a,
+.p-profiles .profile-head .c-info .c-additionals div span {
+  flex: 1 0 100%;
+  padding: 4px 8px;
+  color: var(--color-text-disabled) !important;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.p-profiles .profile-head .c-info .c-additionals div a::first-line,
+.p-profiles .profile-head .c-info .c-additionals div span::first-line {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+  word-spacing: 200px;
+}
+
+.p-profiles .profile-head .c-info .c-additionals div a {
+  color: var(--color-text-hint) !important;
+}
+.p-profiles .profile-head .c-info .c-additionals div a::first-line {
+  color: var(--color-text-primary) !important;
+}
+.p-profiles .profile-head .c-info .c-additionals div a:hover {
+  text-decoration: none;
+}
+.p-profiles .profile-head .c-info .c-additionals div a:focus {
+  outline: none;
+}
+
+
+.p-profiles .profile-head .c-info .c-additionals div span {
+  color: var(--color-text-hint);
+}
+
+.p-profiles .profile-head .c-info .c-additionals div a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--color-overlay-text-pressed);
+  border-radius: var(--border-rounded);
+  opacity: 0;
+  transition: .24s ease-in-out;
+}
+.p-profiles .profile-head .c-info .c-additionals div a:hover::before {
+  opacity: 0.32;
+}
+.p-profiles .profile-head .c-info .c-additionals div a:active::before {
+  opacity: 1;
+}
+/*  */
+.p-profiles .profile-head .c-brief .avatar img {
+    animation: fly 3s ease-in-out infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(12px);
+    }
+}
+.p-profiles header.head .misc:after {  
+  content: "всегда на сайте";
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.p-profiles header.head .misc {
+  font-size: 0px; 
+}
+@import url(https://css-club.web.app/css/compact_news--flex.css);
+
+/* Альтернативный макет для достижений в профиле */
+@import url(https://css-club.web.app/css/profile-achievements-layout-v1.css);
+#profiles_show .achievements > .cc-2 > .c-column > [class*="cc-"] {
+  --steps: 0 !important;
+}
+  /* чиним отсупы */
+.profile-actions > a {
+  margin-right: 4px !important
+}
+.b-rate .score-notice {
+    inset: auto -50% 100%;
+}
+
+.b-collection-topic .collection-groups .cc-collection-groups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 103.5%;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .c-column {
+  margin-right: 0.92% !important;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .b-catalog_entry {
+  order: 9;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .b-catalog_entry.completed {
+  order: 1;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .b-catalog_entry.watching {
+  order: 2;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .b-catalog_entry.rewatching {
+  order: 3;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .b-catalog_entry.on_hold {
+  order: 4;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .b-catalog_entry.planned {
+  order: 5;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > .b-catalog_entry.dropped {
+  order: 6;
+}
+.b-collection-topic .collection-groups .cc-collection-groups > [class~="completed"],
+.b-collection-topic .collection-groups .cc-collection-groups > [class~="watching"],
+.b-collection-topic .collection-groups .cc-collection-groups > [class~="rewatching"],
+.b-collection-topic .collection-groups .cc-collection-groups > [class~="on_hold"],
+.b-collection-topic .collection-groups .cc-collection-groups > [class~="planned"],
+.b-collection-topic .collection-groups .cc-collection-groups > [class~="dropped"] {
+  /* display:none; */
+}
+
+/* Аниме/Манга/Ранобэ рядом с пунктами истории */
+.history-page a:before {
+  display: inline-block;
+  vertical-align: top;
+  width: 72px;
+}
+.history-page a[href ^= "/a"]:before {
+  content: '[Аниме] ';
+  color: #34a853;
+}
+.history-page a[href ^= "/m"]:before {
+  content: '[Манга] ';
+  color: #9c27b0;
+}
+.history-page a[href ^= "/r"]:before {
+  content: '[Ранобэ] ';
+  color: #039be5;
+}
+[data-locale="en"] .history-page a[href ^= "/a"]:before {
+  content: '[Anime] ';
+}
+[data-locale="en"] .history-page a[href ^= "/m"]:before {
+  content: '[Manga] ';
+}
+[data-locale="en"] .history-page a[href ^= "/r"]:before {
+  content: '[Ranobe] ';
+}
+/* END of Аниме/Манга/Ранобэ рядом с пунктами истории */
+
+
+/* Замена стандартных постеров (указывается один раз!) */
+@import url(https://css-club.web.app/css/custom_posters.min.css);
+
+/* Замена постера для ГОТИКА */
+[href*="animes/8425-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/RFZ0w8rs/Gotika.jpg);
+}
+/* Замена постера для ЛЕТНЕЕ ВРЕМЯ */
+[href*="animes/47194-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/X7SkkcJK/image.jpg);
+}
+/* Замена постера для ВОРОНА В ГАРЕМЕ */
+[href*="animes/50590-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/5tTsdcxT/1.png);
+}
+/* Замена постера для ВОСХОЖДЕНИЕ В ТЕНИ */
+[href*="animes/48316-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/7hmPhnQv/image.png);
+}
+/* Замена постера для ВГА */
+[href*="animes/52193-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/fT8F2r9n/1.png);
+}
+/* Замена постера для Одинокий рокеп */
+[href*="animes/47917-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/Fz4gN3YX/image.png);
+}
+/* Замена постера для Ликорис  */
+[href*="animes/50709-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/nhSqP6Zm/600-900-1.png);
+}
+/* Замена постера для оверлорд  */
+[href*="animes/48895-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/PJF8RDnj/poster-reserv.png);
+}
+/* Замена постера для чахождей  */
+[href*="animes/48842-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/CKFLbK9H/image.jpg);
+}
+/* Замена постера для Тюрьма  */
+[href*="animes/49596-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/T2QSP3cv/2.png);
+}
+/* Замена постера для черный призыватель */
+[href*="animes/51064-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/fRHm31rL/Poster600x900-1.png);
+}
