@@ -1,5 +1,10 @@
 /* СНЕГ */
 @import url(https://raw.githubusercontent.com/Vinneygreat/Theme/main/snow);
+
+
+/* Замена стандартных постеров (указывается один раз!) */
+@import url(https://css-club.web.app/css/custom_posters.min.css);
+@import url(https://raw.githubusercontent.com/Vinneygreat/Theme/main/dubClubposter.css);
 /* Всякие импорты */
 @import url(https://css-club.web.app/css/CodeMirror_dark.css);
 @import url(https://css-club.web.app/css/compact_news--flex.css);
@@ -275,7 +280,19 @@
 }
 /* END of Аниме/Манга/Ранобэ рядом с пунктами истории */
 
+/*Акиба */
+img[src*="/animes/original/52193."] {
+  content: url(https://i.postimg.cc/fT8F2r9n/1.png);
+}
+/*Готика */
+img[src*="/animes/original/8425."] {
+  content: url(https://i.postimg.cc/RFZ0w8rs/Gotika.jpg);
+}
+/*Ликорис */
+img[src*="/animes/original/50709."] {
+  content: url(https://i.postimg.cc/nhSqP6Zm/600-900-1.png);
+}
 
-/* Замена стандартных постеров (указывается один раз!) */
-@import url(https://css-club.web.app/css/custom_posters.min.css);
-@import url(https://raw.githubusercontent.com/Vinneygreat/Theme/main/dubClubposters);
+  
+
+  
