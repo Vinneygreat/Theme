@@ -9,6 +9,10 @@ img[src*="/animes/original/8425."] {
 /* Замена Постеры от мыла */
 /*волейбол*/
 /*Превью*/
+[href*="animes/z20583-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/D0Kh1LS2/Poster1.jpg);
+}
 /*фулл*/
 img[src*="/animes/original/20583."] {
   content: url(https://i.postimg.cc/D0Kh1LS2/Poster1.jpg);
