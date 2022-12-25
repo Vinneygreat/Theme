@@ -6,4 +6,15 @@ img[src*="/animes/original/52193."] {
 img[src*="/animes/original/8425."] {
   content: url(https://i.postimg.cc/RFZ0w8rs/Gotika.jpg);
 }
+/* Замена Постеры от мыла */
+/*волейбол*/
+/*Превью*/
+img[src*="/animes/original/20583."] {
+  content: url(https://i.postimg.cc/D0Kh1LS2/Poster1.jpg);
+}
+/*фулл*/
+img[src*="/animes/original/20583."] {
+  content: url(https://i.postimg.cc/D0Kh1LS2/Poster1.jpg);
+}
+
 
