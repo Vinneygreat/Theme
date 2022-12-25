@@ -17,5 +17,15 @@ img[src*="/animes/original/8425."] {
 img[src*="/animes/original/20583."] {
   content: url(https://i.postimg.cc/D0Kh1LS2/Poster1.jpg);
 }
+/*блич*/
+/*Превью*/
+[href*="animes/41467-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.postimg.cc/X7hS3z5y/Prevyu-Postera.jpg);
+}
+/*фулл*/
+img[src*="/animes/original/41467."] {
+  content: url(https://i.postimg.cc/RVb9h0kh/Poster.jpg);
+}
 
 
