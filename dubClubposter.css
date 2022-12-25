@@ -1,7 +1,13 @@
 /* Замена Постеры от мыла */
-
-
-
+/*волейбол*/
+/*Превью*/
+img[src*="/animes/original/20583."] {
+  content: url(https://i.postimg.cc/D0Kh1LS2/Poster1.jpg);
+}
+/*фулл*/
+img[src*="/animes/original/20583."] {
+  content: url(https://i.postimg.cc/D0Kh1LS2/Poster1.jpg);
+}
 
 
 /* Конец Постеры от мыла */
